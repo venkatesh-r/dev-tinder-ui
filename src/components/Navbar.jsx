@@ -38,7 +38,7 @@ const NavBar = () => {
             />
           </div>
           <div className="flex-none mx-3">
-            Welcome
+            Welcome,{" "}
             {user.firstName?.charAt(0).toUpperCase() + user.firstName?.slice(1)}
           </div>
           <div className="dropdown dropdown-end">
@@ -65,6 +65,11 @@ const NavBar = () => {
               <li>
                 <Link to="/Profile" className="justify-between">
                   Profile
+                </Link>
+              </li>
+              <li>
+                <Link to="/connections" className="justify-between">
+                  Connections
                 </Link>
               </li>
               <li>
