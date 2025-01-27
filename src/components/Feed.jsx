@@ -16,6 +16,7 @@ const Feed = () => {
         withCredentials: true,
       });
       dispatch(addFeed(res?.data?.message));
+      console.log(feed);
     } catch (err) {
       console.log(err);
     }
@@ -23,6 +24,12 @@ const Feed = () => {
   useEffect(() => {
     getFeed();
   }, []);
+
+  if (!feed) return;
+
+  if (feed.length <= 0) {
+    return <h1>There is no user!</h1>;
+  }
   return <div>{feed && <UserCard user={feed[0]} />}</div>;
 };
 
