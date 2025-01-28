@@ -29,21 +29,30 @@ const Connections = () => {
   return (
     <div className="text-center">
       <h1 className="text-bold text-2xl">Connections</h1>
-      {connections.map((connection) => {
-        const { _id, firstName, lastName, age, bio, gender, profile } =
-          connection;
-        return (
-          <div key={_id} className="flex">
-            <img
-              className="w-20 h-20 rounded-full"
-              alt="photo"
-              src={profile}
-            ></img>
-            <h2 className="text-2xl font-bold">{firstName + " " + lastName}</h2>
-            <p>{bio}</p>
-          </div>
-        );
-      })}
+      <div className="">
+        {connections.map((connection) => {
+          const { _id, firstName, lastName, age, bio, gender, profile } =
+            connection;
+          return (
+            <div className="flex flex-col justify-center" key={_id}>
+              <div>
+                <img
+                  className="w-20 h-20 rounded-full"
+                  alt="photo"
+                  src={profile}
+                ></img>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold">
+                  {firstName + " " + lastName}
+                </h2>
+                <p>{bio}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

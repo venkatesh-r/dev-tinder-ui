@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../utils/constants";
 
 const Login = () => {
-  const [email, setEmail] = useState("venky@gmail.com");
-  const [password, setPassword] = useState("Venkat@123");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -74,7 +74,7 @@ const Login = () => {
                   className="input input-bordered w-full max-w-xs"
                 />
               </label>
-              <label className="form-control w-full max-w-xs">
+              <label className="form-control w-full max-w-xs mt-2">
                 <div className="label">
                   <span className="label-text font-bold">Last Name</span>
                 </div>
@@ -91,7 +91,7 @@ const Login = () => {
             </>
           )}
 
-          <label className="form-control w-full max-w-xs">
+          <label className="form-control w-full max-w-xs mt-2">
             <div className="label">
               <span className="label-text font-bold">E-Mail</span>
             </div>
@@ -105,7 +105,7 @@ const Login = () => {
               className="input input-bordered w-full max-w-xs"
             />
           </label>
-          <label className="form-control w-full max-w-xs mt-5">
+          <label className="form-control w-full max-w-xs mt-2">
             <div className="label">
               <span className="label-text font-bold">Password</span>
             </div>
