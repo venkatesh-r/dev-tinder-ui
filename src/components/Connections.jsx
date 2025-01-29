@@ -27,26 +27,25 @@ const Connections = () => {
   if (connections.length === 0) return <h1>No connections Found</h1>;
 
   return (
-    <div className="text-center">
-      <h1 className="text-bold text-2xl">Connections</h1>
-      <div className="">
+    <div className=" p-10">
+      <h1 className="text-bold text-2xl text-center my-4">Connections</h1>
+      <div>
         {connections.map((connection) => {
           const { _id, firstName, lastName, age, bio, gender, profile } =
             connection;
           return (
-            <div className="flex flex-col justify-center" key={_id}>
-              <div>
-                <img
-                  className="w-20 h-20 rounded-full"
-                  alt="photo"
-                  src={profile}
-                ></img>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold">
-                  {firstName + " " + lastName}
-                </h2>
+            <div
+              key={_id}
+              className="card card-side bg-base-100 shadow-xl my-5"
+            >
+              <figure className="w-40 h-40">
+                <img src={profile} alt="Profile Photo" />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">{firstName + " " + lastName}</h2>
+                <p>
+                  {age}, {gender}
+                </p>
                 <p>{bio}</p>
               </div>
             </div>
