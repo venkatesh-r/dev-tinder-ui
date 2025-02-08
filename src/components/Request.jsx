@@ -64,7 +64,7 @@ const Request = () => {
             </div>
             <div className="ml-10">
               <button
-                className="btn btn-primary mr-5"
+                className="btn btn-primary mb-3"
                 onClick={() => reviewRequest("accepted", request._id)}
               >
                 Accept
